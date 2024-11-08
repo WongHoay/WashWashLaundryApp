@@ -27,7 +27,7 @@ public class SignUpActivity extends AppCompatActivity {
         Button signUpButton = findViewById(R.id.signUpButton);
 
         mAuth = FirebaseAuth.getInstance();
-        database = FirebaseDatabase.getInstance().getReference("Users");
+        database = FirebaseDatabase.getInstance("https://washwashlaundryapp-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Users");
 
         signUpButton.setOnClickListener(v -> signUpUser());
     }
